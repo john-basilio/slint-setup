@@ -148,6 +148,31 @@ As of writing, Slint documentation does not provide steps to setup your prject f
     ├── Cargo.toml # Rust project configuration
     ```
 
+### Troubleshooting
+
+You might encounter a compile error with the message: ``error: failed to run custom build command for `yeslogic-fontconfig-sys v6.0.1` ``
+
+In this case. You may need to install `pkgconf` and `fontconfig` as your system dependencies:
+
+**Debian/Ubuntu:**
+```bash
+sudo apt install pkg-config libfontconfig1-dev
+```
+
+**Fedora/RHEL:**
+```bash
+sudo dnf install pkgconf-pkg-config fontconfig-devel
+```
+
+**Arch Linux:**
+```bash
+sudo pacman -S pkgconf fontconfig
+```
+
+After installation, run `cargo clean` and then `cargo run` again.
+
+> `cargo clean` ensures your compile cache directory is clean and any potential corrupt files are removed, adding safety measure before your rerun of `cargo run`.
+
 ---
 
 ## End
