@@ -43,17 +43,17 @@ As of writing, Slint documentation does not provide steps to setup your prject f
 
    [dependencies]
    # Use the default features
-   slint = "1.16.1"
+   slint = "1.18.0"
    # Or use this instead (see notes below)
-   # slint = { version = "1.16.1", features = ["renderer-femtovg-wgpu", "backend-winit"] }
+   # slint = { version = "1.18.0", features = ["renderer-femtovg-wgpu", "backend-winit"] }
    
    [build-dependencies]
    # This is used to compile the .slint files and its version should typically match slint's version
-   slint-build = "1.16.1"
+   slint-build = "1.18.0"
    ```
 
   - Notes:
-    - The current version as of writing is `1.16.1`, `cargo add` automatically pulls the latest version, whereas manually adding via `Cargo.toml` still requires you to specify the version.
+    - The current version as of writing is `1.18.0`, `cargo add` automatically pulls the latest version, whereas manually adding via `Cargo.toml` still requires you to specify the version.
     - (Optional) The `renderer-femtovg-wgpu` feature enables GPU acceleration using the femtovg renderer and wgpu backend.
     - (Optional) The `backend-winit` feature enables the winit backend for window management which `renderer-femtovg-wgpu` needs aside from **LinuxKMS** backend.
     - For more information, see [Backends and Renderers](https://docs.slint.dev/latest/docs/slint/guide/backends-and-renderers/backends_and_renderers/)
